@@ -1,0 +1,9 @@
+
+   ______
+  / ____/  ____ _   _____
+ / /      / __ `/  / ___/
+/ /___   / /_/ /  / /    
+\____/   \__,_/  /_/     
+
+ :: Spring Boot                   ::   ${spring-boot.formatted-version}
+ :: App Version                   ::    (@project.version@)
