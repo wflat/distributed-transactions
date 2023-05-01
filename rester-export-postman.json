@@ -1,0 +1,360 @@
+{
+  "info": {
+    "name": "RESTer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "car",
+      "item": [
+        {
+          "request": {
+            "url": "http://localhost:8140/car-infos",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-85",
+          "name": "get all"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8140/car-infos/CAR-INFO-1",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-86",
+          "name": "get by id"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8140/car-infos/CAR-INFO-1",
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Leonardo Royal Hotel Nürnberg\",\n    \"quantity\": 2\n}"
+            }
+          },
+          "id": "rester-87",
+          "name": "patch"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8140/car-infos/CAR-INFO-2/quantity",
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"travelBookingId\": \"TRAVEL-1\",\n    \"eventType\": \"BOOK\",\n    \"entityId\": \"CAR-INFO-2\",\n    \"entityQuantity\": 8\n}"
+            }
+          },
+          "id": "rester-88",
+          "name": "patch quantity"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8140/car-infos",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"LNovina Hotel Wöhrdersee Nürnberg City\",\n    \"quantity\": 8\n}"
+            }
+          },
+          "id": "rester-89",
+          "name": "post"
+        }
+      ]
+    },
+    {
+      "name": "flight",
+      "item": [
+        {
+          "request": {
+            "url": "http://localhost:8150/flight-infos",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-90",
+          "name": "get all"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8150/flight-infos/FLIGHT-INFO-1",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-91",
+          "name": "get by id"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8150/flight-infos/FLIGHT-INFO-1",
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Leonardo Royal Hotel Nürnberg\",\n    \"quantity\": 2\n}"
+            }
+          },
+          "id": "rester-92",
+          "name": "patch"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8150/flight-infos/FLIGHT-INFO-2/quantity",
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"travelBookingId\": \"TRAVEL-1\",\n    \"eventType\": \"BOOK\",\n    \"entityId\": \"FLIGHT-INFO-2\",\n    \"entityQuantity\": 8\n}"
+            }
+          },
+          "id": "rester-93",
+          "name": "patch quantity"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8150/flight-infos",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"LNovina Hotel Wöhrdersee Nürnberg City\",\n    \"quantity\": 8\n}"
+            }
+          },
+          "id": "rester-94",
+          "name": "post"
+        }
+      ]
+    },
+    {
+      "name": "hotel",
+      "item": [
+        {
+          "request": {
+            "url": "http://localhost:8130/hotel-infos",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-80",
+          "name": "get all"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8130/hotel-infos/HOTEL-INFO-1",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-81",
+          "name": "get by id"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8130/hotel-infos/HOTEL-INFO-1",
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Leonardo Royal Hotel Nürnberg\",\n    \"quantity\": 2\n}"
+            }
+          },
+          "id": "rester-82",
+          "name": "patch"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8130/hotel-infos/HOTEL-INFO-2/quantity",
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"travelBookingId\": \"TRAVEL-1\",\n    \"eventType\": \"BOOK\",\n    \"entityId\": \"HOTEL-INFO-2\",\n    \"entityQuantity\": 8\n}"
+            }
+          },
+          "id": "rester-83",
+          "name": "patch quantity"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8130/hotel-infos",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"LNovina Hotel Wöhrdersee Nürnberg City\",\n    \"quantity\": 8\n}"
+            }
+          },
+          "id": "rester-84",
+          "name": "post"
+        }
+      ]
+    },
+    {
+      "name": "travel",
+      "item": [
+        {
+          "request": {
+            "url": "http://localhost:8100/travel-bookings",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-77",
+          "name": "get all"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8100/travel-bookings/TRAVEL-BOOKING-ac8de9de-a096-470a-a28b-650a8048622f",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "id": "rester-78",
+          "name": "get by id"
+        },
+        {
+          "request": {
+            "url": "http://localhost:8100/travel-bookings",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"hotelId\": \"HOTEL-INFO-1\",\n    \"hotelQuantity\": 2,\n    \"carId\": \"CAR-INFO-3\",\n    \"carQuantity\": 1,\n    \"flightId\": \"FLIGHT-INFO-1\",\n    \"flightQuantity\": 5\n}"
+            }
+          },
+          "id": "rester-79",
+          "name": "post"
+        }
+      ]
+    }
+  ]
+}

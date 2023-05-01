@@ -1,0 +1,43 @@
+<!-- formKey: embedded:app:forms/start-process.html -->
+<div>
+  <h3>Start: Travel Booking Process</h3>
+</div>
+
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label class="control-label col-md-4" for="business-key-field">Business key</label>
+    <div class="col-md-8">
+      <input readonly id="business-key-field" ng-model="businessKey" cam-variable-type="String"
+             class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-md-4" for="travel-booking-id-field">Travel Booking ID (DB)</label>
+    <div class="col-md-8">
+      <input required id="travel-booking-id-field" ng-model="travelBookingId" cam-variable-type="String"
+             class="form-control"/>
+    </div>
+  </div>
+
+  <script cam-script type="text/form-script">
+    // debugger;
+    var variableManager = camForm.variableManager;
+
+    camForm.on('form-loaded', function() {
+      // Generated BusinessKey
+      $scope.businessKey = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0,v=c=='x'?r:r&0x3|0x8;return v.toString(16);
+      });
+      $scope.travelBookingId = 1;
+    });
+
+    camForm.on('submit', function() {
+      // Set the BusinessKey
+      camForm.businessKey = $scope.businessKey;
+
+      // declare process-variables
+      variableManager.createVariable({ name: 'travelBookingId', type: 'String', value: $scope.travelBookingId });
+    });
+
+  </script>
+</form>
